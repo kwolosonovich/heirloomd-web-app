@@ -17,8 +17,17 @@ const Logo = forwardRef(({ disabledLink = false, sx }, ref) => {
 
   const PRIMARY_DARK = theme.palette.primary.dark;
 
+  const logoLink = 'https://www.canva.com/design/DAFCIAiptSk/view'
+
   // OR
   // const logo = '/logo/logo_single.svg';
+
+  // export default function Logo() {
+
+  //   // return  <img src='http://localhost:3034/public/assets/logo_full.png' alt='logo' />
+  //   return  <img src='/assets/logo_full.png' alt='logo' />
+  
+  // }
 
   const logo = (
     <Box ref={ref} sx={{ width: 40, height: 40, cursor: 'pointer', ...sx }}>

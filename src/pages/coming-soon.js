@@ -20,11 +20,6 @@ const ContentStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(12, 0),
 }));
 
-const CountdownStyle = styled('div')({
-  display: 'flex',
-  justifyContent: 'center',
-});
-
 const SeparatorStyle = styled(Typography)(({ theme }) => ({
   margin: theme.spacing(0, 1),
   [theme.breakpoints.up('sm')]: {
