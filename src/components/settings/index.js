@@ -2,15 +2,11 @@ import PropTypes from 'prop-types';
 //
 import SettingsDrawer from './drawer';
 //
+import ThemeColorPresets from './ThemeColorPresets';
 import ThemeContrast from './ThemeContrast';
 import ThemeRtlLayout from './ThemeRtlLayout';
-import ThemeColorPresets from './ThemeColorPresets';
 
 // ----------------------------------------------------------------------
-
-ThemeSettings.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default function ThemeSettings({ children }) {
   return (
@@ -24,3 +20,7 @@ export default function ThemeSettings({ children }) {
     </ThemeColorPresets>
   );
 }
+
+ThemeSettings.propTypes = {
+  children: PropTypes.node.isRequired,
+};

@@ -6,14 +6,6 @@ import useSettings from '../../../hooks/useSettings';
 // components
 import Page from '../../../components/Page';
 
-// ----------------------------------------------------------------------
-
-PageSix.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
-};
-
-// ----------------------------------------------------------------------
-
 export default function PageSix() {
   const { themeStretch } = useSettings();
 
@@ -41,3 +33,7 @@ export default function PageSix() {
     </Page>
   );
 }
+
+PageSix.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
+};

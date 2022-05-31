@@ -4,8 +4,6 @@ import { forwardRef } from 'react';
 // @mui
 import { Box, IconButton } from '@mui/material';
 
-// ----------------------------------------------------------------------
-
 const IconButtonAnimate = forwardRef(({ children, size = 'medium', ...other }, ref) => (
   <AnimateWrap size={size}>
     <IconButton size={size} ref={ref} {...other}>
@@ -22,8 +20,6 @@ IconButtonAnimate.propTypes = {
 
 export default IconButtonAnimate;
 
-// ----------------------------------------------------------------------
-
 const varSmall = {
   hover: { scale: 1.1 },
   tap: { scale: 0.95 },
@@ -37,11 +33,6 @@ const varMedium = {
 const varLarge = {
   hover: { scale: 1.08 },
   tap: { scale: 0.99 },
-};
-
-AnimateWrap.propTypes = {
-  children: PropTypes.node.isRequired,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
 };
 
 function AnimateWrap({ size, children }) {
@@ -62,3 +53,8 @@ function AnimateWrap({ size, children }) {
     </Box>
   );
 }
+
+AnimateWrap.propTypes = {
+  children: PropTypes.node.isRequired,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+};

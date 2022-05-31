@@ -7,13 +7,6 @@ import { List, Collapse } from '@mui/material';
 import { NavItemRoot, NavItemSub } from './NavItem';
 import { getActive } from '..';
 
-// ----------------------------------------------------------------------
-
-NavListRoot.propTypes = {
-  isCollapse: PropTypes.bool,
-  list: PropTypes.object,
-};
-
 export function NavListRoot({ list, isCollapse }) {
   const { pathname, asPath } = useRouter();
 
@@ -44,12 +37,6 @@ export function NavListRoot({ list, isCollapse }) {
   return <NavItemRoot item={list} active={active} isCollapse={isCollapse} />;
 }
 
-// ----------------------------------------------------------------------
-
-NavListSub.propTypes = {
-  list: PropTypes.object,
-};
-
 function NavListSub({ list }) {
   const { pathname, asPath } = useRouter();
 
@@ -77,3 +64,12 @@ function NavListSub({ list }) {
 
   return <NavItemSub item={list} active={active} />;
 }
+
+NavListRoot.propTypes = {
+  isCollapse: PropTypes.bool,
+  list: PropTypes.object,
+};
+
+NavListSub.propTypes = {
+  list: PropTypes.object,
+};

@@ -22,14 +22,6 @@ const ContentStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(12, 0),
 }));
 
-// ----------------------------------------------------------------------
-
-Page404.getLayout = function getLayout(page) {
-  return <Layout variant="logoOnly">{page}</Layout>;
-};
-
-// ----------------------------------------------------------------------
-
 export default function Page404() {
   return (
     <Page title="404 Page Not Found">
@@ -60,3 +52,7 @@ export default function Page404() {
     </Page>
   );
 }
+
+Page404.getLayout = function getLayout(page) {
+  return <Layout variant="logoOnly">{page}</Layout>;
+};

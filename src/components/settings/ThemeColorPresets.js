@@ -7,12 +7,6 @@ import useSettings from '../../hooks/useSettings';
 //
 import componentsOverride from '../../theme/overrides';
 
-// ----------------------------------------------------------------------
-
-ThemeColorPresets.propTypes = {
-  children: PropTypes.node,
-};
-
 export default function ThemeColorPresets({ children }) {
   const defaultTheme = useTheme();
 
@@ -39,3 +33,7 @@ export default function ThemeColorPresets({ children }) {
 
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }
+
+ThemeColorPresets.propTypes = {
+  children: PropTypes.node,
+};

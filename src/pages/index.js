@@ -9,7 +9,7 @@ import { PATH_DASHBOARD } from '../routes/paths';
 // ----------------------------------------------------------------------
 
 export default function Index() {
-  const { pathname, replace, prefetch } = useRouter();
+  const { pathname, replace } = useRouter();
 
   useEffect(() => {
     if (pathname === PATH_DASHBOARD.root) {
@@ -18,11 +18,13 @@ export default function Index() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
-  //TODO: re-add when adding login
-  // useEffect(() => {
-  //   prefetch(PATH_AFTER_LOGIN);
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  /*
+   * TODO: re-add when adding login
+   *  useEffect(() => {
+   *    prefetch(PATH_AFTER_LOGIN);
+   *    // eslint-disable-next-line react-hooks/exhaustive-deps
+   *  }, []);
+   */
 
   return null;
 }

@@ -8,12 +8,6 @@ import { CacheProvider } from '@emotion/react';
 // @mui
 import { useTheme } from '@mui/material/styles';
 
-// ----------------------------------------------------------------------
-
-ThemeRtlLayout.propTypes = {
-  children: PropTypes.node,
-};
-
 export default function ThemeRtlLayout({ children }) {
   const theme = useTheme();
 
@@ -28,3 +22,7 @@ export default function ThemeRtlLayout({ children }) {
 
   return <CacheProvider value={cacheRtl}>{children}</CacheProvider>;
 }
+
+ThemeRtlLayout.propTypes = {
+  children: PropTypes.node,
+};

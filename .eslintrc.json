@@ -4,6 +4,7 @@
     "es2021": true
   },
   "extends": [
+    "eslint:all",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@next/next/recommended",
@@ -19,16 +20,16 @@
   },
   "plugins": [
     "react",
-    "@next/eslint-plugin-next"
+    "@next/eslint-plugin-next",
+    "prettier"
   ],
   "rules": {
     "arrow-body-style": 1,
-    "react/prop-types": 1,
+    "react/prop-types": 0,
     "react/display-name": 0,
     "import/no-unresolved": 2,
     "react/no-children-prop": 0,
     "react/self-closing-comp": 2,
-    "react/react-in-jsx-scope": 0,
     "@next/next/no-img-element": 0,
     "react/no-unescaped-entities": 0,
     "import/no-useless-path-segments": 1,
@@ -37,6 +38,32 @@
       {
         "ignoreRestSiblings": false
       }
-    ]
+    ],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/no-deprecated": 2, 
+    "no-multi-spaces": ["error"],
+    "quotes": ["error", "single"],
+    "ignoreArrayIndexes": 0,
+    // "prettier/prettier": "error"
+    "id-length": [2, {"min": 1, "max": 30, "properties": "never", "exceptions": ["x", "y"]}],
+    // "one-var": [1, {
+    //   "var": "always", // Exactly one var declaration per function
+    //   "let": "always", // Exactly one let declaration per block
+    //   "const": "never" // Exactly one declarator per const declaration per block
+    // }],
+    "one-var": [2, { "separateRequires": true, "var": "always" }],
+    "no-magic-numbers": 0,
+    "sort-keys": 0,
+    "capitalized-comments": 0,
+    "no-ternary": 0,
+    "sort-imports": 0,
+    "max-lines": 0,
+    "max-lines-per-function": 0,
+    "func-style": 0,
+    "max-statements": 0,
+    "no-undefined": 0,
+    "require-unicode-regexp": 0,
+    "class-methods-use-this": 0
   }
 }

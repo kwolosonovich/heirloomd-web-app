@@ -7,7 +7,7 @@ export default function Index() {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.pathname == '/dashboard/user') {
+    if (router.pathname === '/dashboard/user') {
       router.push('/dashboard/user/four');
     }
   });

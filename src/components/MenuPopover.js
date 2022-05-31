@@ -43,7 +43,7 @@ const ArrowStyle = styled('span')(({ arrow, theme }) => {
       zIndex: 1,
       width: SIZE,
       height: SIZE,
-      content: "''",
+      content: '"',
       display: 'block',
       position: 'absolute',
       transform: 'rotate(-135deg)',
@@ -68,27 +68,6 @@ const ArrowStyle = styled('span')(({ arrow, theme }) => {
   };
 });
 
-// ----------------------------------------------------------------------
-
-MenuPopover.propTypes = {
-  sx: PropTypes.object,
-  children: PropTypes.node,
-  disabledArrow: PropTypes.bool,
-  arrow: PropTypes.oneOf([
-    'top-left',
-    'top-center',
-    'top-right',
-    'bottom-left',
-    'bottom-center',
-    'bottom-right',
-    'left-top',
-    'left-center',
-    'left-bottom',
-    'right-top',
-    'right-center',
-    'right-bottom',
-  ]),
-};
 export default function MenuPopover({ children, arrow = 'top-right', disabledArrow, sx, ...other }) {
   return (
     <Popover
@@ -110,3 +89,23 @@ export default function MenuPopover({ children, arrow = 'top-right', disabledArr
     </Popover>
   );
 }
+
+MenuPopover.propTypes = {
+  sx: PropTypes.object,
+  children: PropTypes.node,
+  disabledArrow: PropTypes.bool,
+  arrow: PropTypes.oneOf([
+    'top-left',
+    'top-center',
+    'top-right',
+    'bottom-left',
+    'bottom-center',
+    'bottom-right',
+    'left-top',
+    'left-center',
+    'left-bottom',
+    'right-top',
+    'right-center',
+    'right-bottom',
+  ]),
+};

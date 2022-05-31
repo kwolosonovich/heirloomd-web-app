@@ -8,12 +8,6 @@ import useSettings from '../../hooks/useSettings';
 //
 import componentsOverride from '../../theme/overrides';
 
-// ----------------------------------------------------------------------
-
-ThemeContrast.propTypes = {
-  children: PropTypes.node,
-};
-
 export default function ThemeContrast({ children }) {
   const defaultTheme = useTheme();
 
@@ -71,3 +65,7 @@ export default function ThemeContrast({ children }) {
     </ThemeProvider>
   );
 }
+
+ThemeContrast.propTypes = {
+  children: PropTypes.node,
+};

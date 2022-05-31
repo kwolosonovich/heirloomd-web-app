@@ -5,22 +5,14 @@ import { Box } from '@mui/material';
 //
 import { varFade } from './variants';
 
-// ----------------------------------------------------------------------
-
-TextAnimate.propTypes = {
-  text: PropTypes.string.isRequired,
-  variants: PropTypes.object,
-  sx: PropTypes.object,
-};
-
 export default function TextAnimate({ text, variants, sx, ...other }) {
   return (
     <Box
       component={m.h1}
       sx={{
-        typography: 'h1',
-        overflow: 'hidden',
         display: 'inline-flex',
+        overflow: 'hidden',
+        typography: 'h1',
         ...sx,
       }}
       {...other}
@@ -33,3 +25,9 @@ export default function TextAnimate({ text, variants, sx, ...other }) {
     </Box>
   );
 }
+
+TextAnimate.propTypes = {
+  sx: PropTypes.object,
+  text: PropTypes.string.isRequired,
+  variants: PropTypes.object,
+};

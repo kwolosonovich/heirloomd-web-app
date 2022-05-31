@@ -16,10 +16,6 @@ const hideScrollbar = {
   },
 };
 
-NavSectionHorizontal.propTypes = {
-  navConfig: PropTypes.array,
-};
-
 function NavSectionHorizontal({ navConfig }) {
   return (
     <Stack direction="row" justifyContent="center" sx={{ bgcolor: 'background.neutral', borderRadius: 1, px: 0.5 }}>
@@ -35,5 +31,9 @@ function NavSectionHorizontal({ navConfig }) {
     </Stack>
   );
 }
+
+NavSectionHorizontal.propTypes = {
+  navConfig: PropTypes.array,
+};
 
 export default memo(NavSectionHorizontal);

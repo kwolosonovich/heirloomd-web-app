@@ -62,17 +62,17 @@ export default function SettingsDrawer() {
     themeColorPresets !== defaultSettings.themeColorPresets;
 
   const varSidebar =
-    themeDirection !== 'rtl'
+    themeDirection === 'rtl'
       ? varFade({
-          distance: NAVBAR.BASE_WIDTH,
-          durationIn: 0.32,
-          durationOut: 0.32,
-        }).inRight
+        distance: NAVBAR.BASE_WIDTH,
+        durationIn: 0.32,
+        durationOut: 0.32,
+      }).inLeft
       : varFade({
           distance: NAVBAR.BASE_WIDTH,
           durationIn: 0.32,
           durationOut: 0.32,
-        }).inLeft;
+        }).inRight
 
   useEffect(() => {
     if (open) {

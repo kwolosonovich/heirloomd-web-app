@@ -23,14 +23,6 @@ import ThemeSettings from '../components/settings';
 import ProgressBar from '../components/ProgressBar';
 import MotionLazyContainer from '../components/animate/MotionLazyContainer';
 
-// ----------------------------------------------------------------------
-
-MyApp.propTypes = {
-  Component: PropTypes.func,
-  pageProps: PropTypes.object,
-  settings: PropTypes.object,
-};
-
 export default function MyApp(props) {
   const { Component, pageProps, settings } = props;
 
@@ -71,4 +63,10 @@ MyApp.getInitialProps = async (context) => {
     ...appProps,
     settings,
   };
+};
+
+MyApp.propTypes = {
+  Component: PropTypes.func,
+  pageProps: PropTypes.object,
+  settings: PropTypes.object,
 };

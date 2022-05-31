@@ -1,6 +1,6 @@
 // @mui
 import { styled } from '@mui/material/styles';
-import { Button, Stack, Container, Typography, InputAdornment } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 // layouts
 import Layout from '../layouts';
 // components
@@ -20,21 +20,6 @@ const ContentStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(2, 0),
 }));
 
-const SeparatorStyle = styled(Typography)(({ theme }) => ({
-  margin: theme.spacing(0, 1),
-  [theme.breakpoints.up('sm')]: {
-    margin: theme.spacing(0, 2.5),
-  },
-}));
-
-// ----------------------------------------------------------------------
-
-ComingSoon.getLayout = function getLayout(page) {
-  return <Layout variant="logoOnly">{page}</Layout>;
-};
-
-// ----------------------------------------------------------------------
-
 export default function ComingSoon() {
   return (
     <Page title="Coming Soon">
@@ -50,3 +35,7 @@ export default function ComingSoon() {
     </Page>
   );
 }
+
+ComingSoon.getLayout = function getLayout(page) {
+  return <Layout variant="logoOnly">{page}</Layout>;
+};

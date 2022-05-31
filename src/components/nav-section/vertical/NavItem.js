@@ -8,25 +8,6 @@ import Iconify from '../../Iconify';
 import { ListItemStyle as ListItem, ListItemTextStyle, ListItemIconStyle } from './style';
 import { isExternalLink } from '..';
 
-// ----------------------------------------------------------------------
-
-NavItemRoot.propTypes = {
-  active: PropTypes.bool,
-  open: PropTypes.bool,
-  isCollapse: PropTypes.bool,
-  onOpen: PropTypes.func,
-  item: PropTypes.shape({
-    children: PropTypes.array,
-    icon: PropTypes.any,
-    info: PropTypes.any,
-    path: PropTypes.string,
-    title: PropTypes.string,
-    disabled: PropTypes.bool,
-    caption: PropTypes.string,
-    roles: PropTypes.arrayOf(PropTypes.string),
-  }),
-};
-
 export function NavItemRoot({ item, isCollapse, open = false, active, onOpen }) {
   const { title, path, icon, info, children, disabled, caption, roles } = item;
 
@@ -80,23 +61,6 @@ export function NavItemRoot({ item, isCollapse, open = false, active, onOpen }) 
   );
 }
 
-// ----------------------------------------------------------------------
-
-NavItemSub.propTypes = {
-  active: PropTypes.bool,
-  open: PropTypes.bool,
-  onOpen: PropTypes.func,
-  item: PropTypes.shape({
-    children: PropTypes.array,
-    info: PropTypes.any,
-    path: PropTypes.string,
-    title: PropTypes.string,
-    disabled: PropTypes.bool,
-    caption: PropTypes.bool,
-    roles: PropTypes.arrayOf(PropTypes.string),
-  }),
-};
-
 export function NavItemSub({ item, open = false, active = false, onOpen }) {
   const { title, path, info, children, disabled, caption, roles } = item;
 
@@ -145,12 +109,6 @@ export function NavItemSub({ item, open = false, active = false, onOpen }) {
   );
 }
 
-// ----------------------------------------------------------------------
-
-DotIcon.propTypes = {
-  active: PropTypes.bool,
-};
-
 export function DotIcon({ active }) {
   return (
     <ListItemIconStyle>
@@ -175,12 +133,6 @@ export function DotIcon({ active }) {
   );
 }
 
-// ----------------------------------------------------------------------
-
-ArrowIcon.propTypes = {
-  open: PropTypes.bool,
-};
-
 export function ArrowIcon({ open }) {
   return (
     <Iconify
@@ -189,3 +141,27 @@ export function ArrowIcon({ open }) {
     />
   );
 }
+
+NavItemRoot.propTypes = {
+  active: PropTypes.bool,
+  open: PropTypes.bool,
+  isCollapse: PropTypes.bool,
+  onOpen: PropTypes.func,
+  item: PropTypes.shape({
+    children: PropTypes.array,
+    icon: PropTypes.any,
+    info: PropTypes.any,
+    path: PropTypes.string,
+    title: PropTypes.string,
+    disabled: PropTypes.bool,
+    caption: PropTypes.string,
+    roles: PropTypes.arrayOf(PropTypes.string),
+  }),
+};
+
+DotIcon.propTypes = {
+  active: PropTypes.bool,
+};
+ArrowIcon.propTypes = {
+  open: PropTypes.bool,
+};

@@ -51,12 +51,6 @@ export default function SettingLayout() {
   );
 }
 
-// ----------------------------------------------------------------------
-
-VerticalBox.propTypes = {
-  isSelected: PropTypes.bool,
-};
-
 const style = {
   width: 1,
   height: 32,
@@ -92,10 +86,6 @@ function VerticalBox({ isSelected }) {
   );
 }
 
-HorizontalBox.propTypes = {
-  isSelected: PropTypes.bool,
-};
-
 function HorizontalBox({ isSelected }) {
   return (
     <>
@@ -124,7 +114,7 @@ function HorizontalBox({ isSelected }) {
         <Box
           sx={{
             ...style,
-            width: `calc(100% - 26px)`,
+            width: 'calc(100% - 26px)',
             border: (theme) => `dashed 1px ${theme.palette.divider}`,
             bgcolor: (theme) => alpha(theme.palette.text.disabled, 0.08),
             ...(isSelected && {
@@ -137,3 +127,11 @@ function HorizontalBox({ isSelected }) {
     </>
   );
 }
+
+HorizontalBox.propTypes = {
+  isSelected: PropTypes.bool,
+};
+
+VerticalBox.propTypes = {
+  isSelected: PropTypes.bool,
+};

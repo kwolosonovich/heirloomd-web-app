@@ -6,14 +6,6 @@ import useSettings from '../../../hooks/useSettings';
 // components
 import Page from '../../../components/Page';
 
-// ----------------------------------------------------------------------
-
-PageFour.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
-};
-
-// ----------------------------------------------------------------------
-
 export default function PageFour() {
   const { themeStretch } = useSettings();
 
@@ -41,3 +33,7 @@ export default function PageFour() {
     </Page>
   );
 }
+
+PageFour.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
+};

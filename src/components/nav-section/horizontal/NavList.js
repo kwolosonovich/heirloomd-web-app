@@ -7,15 +7,6 @@ import { NavItemRoot, NavItemSub } from './NavItem';
 import { PaperStyle } from './style';
 import { getActive } from '..';
 
-// ----------------------------------------------------------------------
-
-NavListRoot.propTypes = {
-  list: PropTypes.shape({
-    children: PropTypes.array,
-    path: PropTypes.string,
-  }),
-};
-
 export function NavListRoot({ list }) {
   const menuRef = useRef(null);
 
@@ -27,13 +18,6 @@ export function NavListRoot({ list }) {
 
   const hasChildren = list.children;
 
-  useEffect(() => {
-    if (open) {
-      handleClose();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname]);
-
   const handleOpen = () => {
     setOpen(true);
   };
@@ -41,6 +25,13 @@ export function NavListRoot({ list }) {
   const handleClose = () => {
     setOpen(false);
   };
+
+  useEffect(() => {
+    if (open) {
+      handleClose();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   if (hasChildren) {
     return (
@@ -74,15 +65,6 @@ export function NavListRoot({ list }) {
 
   return <NavItemRoot item={list} active={active} />;
 }
-
-// ----------------------------------------------------------------------
-
-NavListSub.propTypes = {
-  list: PropTypes.shape({
-    children: PropTypes.array,
-    path: PropTypes.string,
-  }),
-};
 
 function NavListSub({ list }) {
   const menuRef = useRef(null);
@@ -135,3 +117,17 @@ function NavListSub({ list }) {
 
   return <NavItemSub item={list} active={active} />;
 }
+
+NavListRoot.propTypes = {
+  list: PropTypes.shape({
+    children: PropTypes.array,
+    path: PropTypes.string,
+  }),
+};
+
+NavListSub.propTypes = {
+  list: PropTypes.shape({
+    children: PropTypes.array,
+    path: PropTypes.string,
+  }),
+};
