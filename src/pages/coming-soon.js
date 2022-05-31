@@ -11,13 +11,13 @@ import { ComingSoonIllustration } from '../assets';
 // ----------------------------------------------------------------------
 
 const ContentStyle = styled('div')(({ theme }) => ({
-  maxWidth: 480,
+  maxWidth: 580,
   margin: 'auto',
   minHeight: '100vh',
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'column',
-  padding: theme.spacing(12, 0),
+  padding: theme.spacing(2, 0),
 }));
 
 const SeparatorStyle = styled(Typography)(({ theme }) => ({
@@ -40,11 +40,11 @@ export default function ComingSoon() {
     <Page title="Coming Soon">
       <Container>
         <ContentStyle sx={{ textAlign: 'center' }}>
-          <Typography variant="h3" paragraph>
+        <ComingSoonIllustration sx={{ my: 0 }} />
+          <Typography variant="h3" paragraph style={{marginTop: '-10rem'}}>
             Coming Soon!
           </Typography>
-          <Typography sx={{ color: 'text.secondary' }}>We are currently working hard on this page!</Typography>
-          <ComingSoonIllustration sx={{ my: 10, height: 240 }} />
+          <Typography>We are currently working hard on this page!</Typography>
         </ContentStyle>
       </Container>
     </Page>

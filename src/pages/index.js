@@ -18,10 +18,11 @@ export default function Index() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
-  useEffect(() => {
-    prefetch(PATH_AFTER_LOGIN);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  //TODO: re-add when adding login
+  // useEffect(() => {
+  //   prefetch(PATH_AFTER_LOGIN);
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   return null;
 }

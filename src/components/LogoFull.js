@@ -10,14 +10,14 @@ import Image from './Image'
 
 // ----------------------------------------------------------------------
 
-function Logo() {
+function FullLogo() {
   return (
     <Box>
-      <div style={{position: "absolute", width: '100%', height: '100%', top: '.5rem', left: '.5rem', border: 'none', padding: 0, margin: 0}} >
-        <Image alt="logo" src="/logo/logo_small.png" sx={{ maxWidth: 50 }} />
+      <div style={{position: "absolute", width: '100%', height: '100%', top: '3rem', border: 'none', margin: 0}} >
+        <Image alt="logo" src="/logo/logo_full.png" sx={{ width: 600, minWith: 1 }} />
       </div>
     </Box>
   )
 }
 
-export default Logo;
+export default FullLogo;
